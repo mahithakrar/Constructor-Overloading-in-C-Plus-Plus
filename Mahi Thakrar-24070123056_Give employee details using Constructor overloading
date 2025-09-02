@@ -1,0 +1,86 @@
+//NAME:MAHI THAKRAR
+//PRN:24070123056
+//ENTC A3
+//EXPERIMENT-13
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Employee {
+private:
+    string name;
+    int age;
+    double salary;
+
+public:
+    // Constructor with no parameters
+    Employee() {
+        name = "Unknown";
+        age = 0;
+        salary = 0.0;
+    }
+
+    // Constructor with one parameter (name)
+    Employee(string n) {
+        name = n;
+        age = 0;
+        salary = 0.0;
+    }
+
+    // Constructor with two parameters (name, age)
+    Employee(string n, int a) {
+        name = n;
+        age = a;
+        salary = 0.0;
+    }
+
+    // Constructor with three parameters (name, age, salary)
+    Employee(string n, int a, double s) {
+        name = n;
+        age = a;
+        salary = s;
+    }
+
+    void displayDetails() {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+        cout << "Salary: " << salary << endl;
+    }
+};
+
+int main() {
+    Employee emp1;
+    Employee emp2("Mahi");
+    Employee emp3("Palak", 30);
+    Employee emp4("Pal", 40, 50000.0);
+
+    cout << "Employee 1 details:" << endl;
+    emp1.displayDetails();
+    cout << "Employee 2 details:" << endl;
+    emp2.displayDetails();
+    cout << "Employee 3 details:" << endl;
+    emp3.displayDetails();
+    cout << "Employee 4 details:" << endl;
+    emp4.displayDetails();
+
+    return 0;
+}
+
+//Output:
+//Employee 1 details:
+//Name: Unknown
+//Age: 0
+//Salary: 0
+//Employee 2 details:
+//Name: Mahi
+//Age: 0
+//Salary: 0
+//Employee 3 details:
+//Name: Palak
+//Age: 30
+//Salary: 0
+//Employee 4 details:
+//Name: Pal
+//Age: 40
+//Salary: 50000
