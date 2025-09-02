@@ -1,0 +1,48 @@
+//NAME:MAHI THAKRAR
+//PRN:24070123056
+//ENTC A3
+//EXPERIMENT-13
+
+#include <iostream>
+using namespace std;
+
+class Shape{
+    public:
+    
+    //Volume of a cube
+    double calculateVolume(double side){
+        return side*side*side;
+    }
+    
+    //Volume of a rectangular prism
+    double calculateVolume(double length,double width,double height){
+        return length*width*height;
+    }
+    
+    //Volume of a cylinder
+    double calculateVolume(double radius,double Height){
+        return 3.14*radius*radius*Height;
+    }
+};
+
+int main() {
+    Shape s;
+    
+    double side=5.0;
+    cout<<"Volume of the cube ="<<s.calculateVolume(side)<<endl;
+    
+    double length=1.0;
+    double width=3.6;
+    double height=2.0;
+    cout<<"Volume of the rectangular prism ="<<s.calculateVolume(length,width,height)<<endl;
+    
+    double radius=3.0;
+    cout<<"Volume of the cylinder ="<<s.calculateVolume(radius)<<endl;
+    
+    return 0;
+}
+
+//Output:
+//Volume of the cube =125
+//Volume of the rectangular prism =7.2
+//Volume of the cylinder =27
