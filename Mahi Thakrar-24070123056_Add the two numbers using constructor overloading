@@ -3,3 +3,32 @@
 //ENTC A3
 //EXPERIMENT-13
 
+#include <iostream>
+using namespace std;
+
+class Add {
+private:
+    double sum;
+public:
+   
+    Add(int a, int b,int c) {
+        sum = a + b+c;
+        cout << "Sum = " << sum << endl;
+    }
+
+
+    Add(int a, int b) {
+        sum = a + b;
+        cout << "Sum = " << sum << endl;
+    }
+};
+    
+int main() {
+    Add A1(25,8500,1000);  
+    Add A2(5,10);                 
+    return 0;
+}
+
+//Output:
+//Sum = 9525
+//Sum = 15
