@@ -1,0 +1,40 @@
+//NAME:MAHI THAKRAR
+//PRN:24070123056
+//ENTC A3
+//EXPERIMENT-13
+
+#include <iostream>
+using namespace std;
+
+class Number {
+    int value;  
+public:
+    Number(int v) {  
+        value = v;
+    }
+
+    // Overload == operator
+    bool operator == (Number obj) {
+        return value == obj.value;
+    }
+};
+
+int main() {
+    Number n1(10), n2(10), n3(20);
+
+    if (n1 == n2)
+        cout << "n1 and n2 are equal" << endl;
+    else
+        cout << "n1 and n2 are not equal" << endl;
+
+    if (n1 == n3)
+        cout << "n1 and n3 are equal" << endl;
+    else
+        cout << "n1 and n3 are not equal" << endl;
+
+    return 0;
+}
+
+//Output:
+//n1 and n2 are equal
+//n1 and n3 are not equal
